@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Interface</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="layer-bottom">
+        <nav class="sidebar">
+            <a href="#" class="sidebar-btn active" data-action="home" title="主页" target="_blank" rel="noopener noreferrer"><i data-lucide="home"></i></a>
+            <a href="#" class="sidebar-btn" data-action="blog" title="博客" target="_blank" rel="noopener noreferrer"><i data-feather="bookmark"></i></a>
+            <a href="#" class="sidebar-btn" data-action="github" title="GitHub" target="_blank" rel="noopener noreferrer"><i data-feather="github"></i></a>
+            <div class="sidebar-btn" data-action="theme" id="theme-toggle" title="切换主题"><i data-lucide="moon"></i></div>
+            <a href="#" class="sidebar-btn" data-action="add" title="添加" target="_blank" rel="noopener noreferrer"><i data-lucide="user-round-plus"></i></a>
+        </nav>
+
+        <div class="footer-beian">
+            <a href="https://github.com/UeCook/Friend_Links" target="_blank" rel="noopener noreferrer" class="beian-item">
+                Friend_Links by UeCook / 圣堂之魂
+            </a>
+        </div>
+    </div>
+
+    <div class="layer-top">
+        <div class="panel">
+            <div class="panel-header">友情链接</div>
+            <div class="panel-content" id="cards-container"></div>
+        </div>
+    </div>
+
+    <script src="font/lucide.min.js"></script>
+    <script src="font/feather.min.js"></script>
+    <script src="js/cards.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
