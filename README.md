@@ -121,5 +121,3 @@ Friend_Links
 ---
 
 UeCook / 圣堂之魂
-
-- GitHub：[UeCook/Friend_Links](https://github.com/UeCook/Friend_Links)
