@@ -11,26 +11,38 @@
  *         icon 字段填写完整的 SVG 标签字符串
  */
 const CARDS_DATA = [
-    {
-        avatar: './avatar.avif',
-        name: '测试1',
-        title: '副标题1',
+        {
+        avatar: 'https://uecook.top/avatar.avif',
+        name: '圣堂之魂',
+        title: '是圣堂呀~请你吃青苹果！',
         links: [
-            { type: 'L', icon: 'user', url: '#', title: '个人主页' },
-            { type: 'L', icon: 'home', url: '#', title: '首页' },
-            { type: 'L', icon: 'link', url: '#', title: 'GitHub' },
-            { type: 'L', icon: 'mail', url: '#', title: '邮箱' }
+            { type: 'L', icon: 'house', url: 'https://uecook.top', title: '主页' },
+            { type: 'L', icon: 'id-card', url: 'https://oc.uecook.top', title: 'OC' },
+            { type: 'F', icon: 'bookmark', url: 'https://blog.uoca.top', title: 'blog' },
         ]
     },
     {
-        avatar: '',
-        name: '测试2',
-        title: '副标题2',
+        avatar: 'https://www.misakaoi.top/images/icon/logo.png',
+        name: '未眠海',
+        title: '',
         links: [
-            { type: 'L', icon: 'user', url: '#', title: '个人主页' },
-            { type: 'T', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>', url: '#', title: '自定义图标' },
-            { type: 'F', icon: 'star', url: '#', title: 'Feather图标' },
-            { type: 'T', icon: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>', url: '#', title: '星星' }
+            { type: 'L', icon: 'house', url: 'https://www.misakaoi.top', title: '主页' },
+        ]
+    },
+    {
+        avatar: 'https://github.com/CarmJos.png',
+        name: 'Carm_卡姆',
+        title: '编程与摄影日记',
+        links: [
+            { type: 'L', icon: 'house', url: 'https://www.carm.cc', title: '主页' },
+        ]
+    },
+        {
+        avatar: 'https://i1.hdslb.com/bfs/face/eaeee9f3e3f4ac18adb06933dd40ff4bf038d8fa.jpg@128w_128h_1c_1s.webp',
+        name: 'FSE-Media-Group',
+        title: 'FSE广播电视总台 FarSight-T.N.E Minecraft服务器',
+        links: [
+            { type: 'F', icon: 'youtube', url: 'https://space.bilibili.com/3632319667636264', title: 'B站' },
         ]
     }
 ];

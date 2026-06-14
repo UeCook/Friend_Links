@@ -88,6 +88,16 @@ html, body {
     overflow: hidden;
 }
 
+/* 移动端视口高度修复：使用 dvh 替代 vh，解决移动浏览器地址栏导致 100vh 超出可视区域的问题 */
+@supports (height: 100dvh) {
+    .layer-bottom {
+        height: 100dvh;
+    }
+    .sidebar {
+        height: calc(100dvh - 48px);
+    }
+}
+
 body {
     font-family: 'MiSans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     -webkit-tap-highlight-color: transparent;
@@ -163,11 +173,12 @@ body {
     height: 22px;
 }
 
-/* 底部备案信息 */
+/* 底部备案信息 — 独立固定定位，基于视口右下角对齐，不受父容器影响 */
 .footer-beian {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -310,6 +321,7 @@ body {
 }
 
 /* 右侧链接网格（最多 4 个，2×2） */
+/* direction:rtl 实现从右到左排布：1→右上 2→左上 3→右下 4→左下 */
 .card-links {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -317,6 +329,7 @@ body {
     gap: clamp(6px, 1vw, 10px);
     flex-shrink: 0;
     min-height: calc(clamp(32px, 5vw, 40px) * 2 + clamp(6px, 1vw, 10px));
+    direction: rtl; /* 网格从右到左填充 */
 }
 
 .card-link {
@@ -332,6 +345,7 @@ body {
     color: var(--text-secondary);
     text-decoration: none;
     transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    direction: ltr; /* 恢复图标内容方向，防止镜像翻转 */
 }
 
 .card-link:hover {
